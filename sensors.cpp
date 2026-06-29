@@ -8,6 +8,8 @@ public:
 Sensor(std::string name, int id) 
         : name(std::move(name)), id(id) {}
 ~Sensor();
+int getId() const { return id; }
+const std::string& getName() const { return name; }
 virtual void printInfo() const{
   std::cout << "Sensor ID : " << id << "Sensor Name : " << name;
 }
