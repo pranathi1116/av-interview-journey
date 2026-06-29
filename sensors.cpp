@@ -1,9 +1,12 @@
 #include <iostream>
 
 class Sensor {
-public:
+protected:
 int id;
 string name;
+public:
+Sensor(std::string name, int id) 
+        : name(std::move(name)), id(id) {}
 ~Sensor();
 virtual void printInfo() const{
   std::cout << "Sensor ID : " << id << "Sensor Name : " << name;
