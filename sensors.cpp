@@ -15,6 +15,8 @@ virtual void printInfo() const{
 
 class Lidar : public Sensor {
 public :
+Lidar(std::string name, int id) 
+        : Sensor(std::move(name), id) {}
 ~Lidar();
 void printInfo() const override {
   std::cout << "Sensor ID : " << id << "Sensor Name : " << name;
@@ -23,6 +25,8 @@ void printInfo() const override {
 
 class Camera : public Sensor {
 public :
+Camera(std::string name, int id) 
+        : Sensor(std::move(name), id) {}
 ~Camera();
 void printInfo() const override {
   std::cout << "Sensor ID : " << id << "Sensor Name : " << name;
@@ -31,6 +35,8 @@ void printInfo() const override {
 
 class Radar : public Sensor {
 public :
+Radar(std::string name, int id) 
+        : Sensor(std::move(name), id) {}
 ~Radar();
 void printInfo() const override {
   std::cout << "Sensor ID : " << id << "Sensor Name : " << name;
